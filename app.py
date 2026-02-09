@@ -12,11 +12,12 @@ from scipy.io.wavfile import write
 import tempfile
 import os
 from datetime import datetime
+import os
 
 # ============================================
 # CONFIGURE YOUR API KEY HERE
 # ============================================
-GEMINI_API_KEY = "AIzaSyAPaOfBuSRCzrtqFdJsfaanltdOAFmhSWc"
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 # ============================================
 
 # Configure Gemini API
