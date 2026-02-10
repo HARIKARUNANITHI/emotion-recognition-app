@@ -3,5 +3,3 @@ google-generativeai
 opencv-python-headless
 numpy
 pillow
-sounddevice
-scipy

@@ -7,8 +7,6 @@ from PIL import Image
 import io
 import base64
 import json
-import sounddevice as sd
-from scipy.io.wavfile import write
 import tempfile
 import os
 from datetime import datetime
@@ -275,16 +273,8 @@ def display_results(result):
         st.markdown("### 📝 Detailed Analysis")
         st.write(result['analysis'])
 
-def record_audio(duration=5, sample_rate=44100):
-    """Record audio from microphone"""
-    st.info(f"🎤 Recording for {duration} seconds...")
-    recording = sd.rec(int(duration * sample_rate), 
-                      samplerate=sample_rate, 
-                      channels=1, 
-                      dtype='int16')
-    sd.wait()
-    st.success("✅ Recording completed!")
-    return recording, sample_rate
+st.info("Live microphone recording is not supported in online deployment. Please upload an audio file.")
+
 
 # Main App
 def main():
